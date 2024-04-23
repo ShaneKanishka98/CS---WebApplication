@@ -11,6 +11,27 @@
     <title>Message</title>
 </head>
 <body>
-    <h1>Message Details</h1>
+    <h1>Customer Message Details</h1>
+    <h2>@ViewData["Message"]</h2>
+    
+    <p>There are @ViewData["CustomerCount"] in the customers' list.</p>
+
+    <table>
+        <thead>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Amount</th>
+        </thead>
+        <tbody>
+            @foreach (var customer in @ViewData["Customers"] as List<Customer>)
+            {
+                <tr>
+                    <td>@customer.Id</td>
+                    <td>@customer.Name</td>
+                    <td>@customer.Amount</td>
+                </tr>
+            }
+        </tbody>
+    </table>
 </body>
 </html>

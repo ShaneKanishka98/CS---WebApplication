@@ -11,7 +11,7 @@
 <p>There are @ViewBag.CustomerCount added to the list.</p>
 
 <ul>
-    @foreach(var customer in ViewBag.Customers)
+    @foreach(var customer in @ViewBag.Customers)
     {
         <li>@customer.Id - @customer.Name - @customer.Amount</li>
     }

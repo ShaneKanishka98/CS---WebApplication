@@ -28,6 +28,10 @@ namespace coreWebApplication.Controllers
         [Route("~/sample/message")]
         public IActionResult Message()
         {
+            ViewData["Message"] = "Welcome to Customer Management System";
+            ViewData["CustomerCount"] = customers.Count();
+            ViewData["Customers"] = customers;
+
             return View();
         }
     }
