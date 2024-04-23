@@ -18,5 +18,17 @@ namespace coreWebApplication.Controllers
 
             return View();
         }
+
+        public IActionResult Details()
+        {
+            return View();
+        }
+
+        // Attribute Routing (Default Page) :- [Route("~/")]
+        [Route("~/sample/message")]
+        public IActionResult Message()
+        {
+            return View();
+        }
     }
 }
